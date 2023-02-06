@@ -1,4 +1,5 @@
 import { alarm } from "./alarm.js";
+import { changeActiveBtn } from "./control.js";
 import { state } from "./state.js"
 import { addZero } from "./util.js";
 
@@ -20,7 +21,6 @@ export const startTimer = () => {
   }
 
   if (state.timeLeft <= 0) {
-    alarm();
 
     if (state.status === 'work') {
       state.activeToDo.pomodoro +=1;
@@ -35,7 +35,9 @@ export const startTimer = () => {
       state.status = 'work'
     }
 
+    alarm();
     state.timeLeft = state[state.status] * 60;
+    changeActiveBtn(state.status);
     startTimer();
   }
 }
