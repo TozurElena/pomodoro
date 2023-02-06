@@ -2,11 +2,12 @@
   font-family: Lobster;
   font-style: normal;
   font-weight: 400;
-  src: local(''),
-    url('../fonts/lobster-v28-latin_cyrillic-regular.woff2') format('woff2'),
+  src: local(""),
+    url("../fonts/lobster-v28-latin_cyrillic-regular.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-    url('../fonts/lobster-v28-latin_cyrillic-regular.woff') format('woff');
+      url("../fonts/lobster-v28-latin_cyrillic-regular.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  font-display: swap;
 }
 
 html {
@@ -24,8 +25,8 @@ body {
   min-width: 320px;
   min-height: 100vh;
   font-family: Lobster, sans-serif;
-  background-color: #FFF8EE;
-  color: #F85959;
+  background-color: #fff8ee;
+  color: #f85959;
   display: flex;
 }
 
@@ -92,7 +93,7 @@ iframe {
 }
 
 .header__title {
-  color: #C44747;
+  color: #c44747;
   margin-right: 16px;
 }
 
@@ -113,7 +114,7 @@ iframe {
 
 .navigation__btn:hover {
   background-color: #f53f3f;
-  color: #FFF8EE;
+  color: #fff8ee;
 }
 
 .navigation__btn:last-child {
@@ -122,15 +123,18 @@ iframe {
 
 .navigation__btn_active {
   pointer-events: none;
-  color: #FFF8EE;
-  background-color: #F85959;
+  color: #fff8ee;
+  background-color: #f85959;
 }
 
 .time {
   font-size: 120px;
-  color: #F85959;
+  color: #f85959;
   text-align: center;
   margin-bottom: 60px;
+  display: grid;
+  grid-template-columns: 130px min-content 130px;
+  align-self: center;
 }
 
 .title {
@@ -150,8 +154,8 @@ iframe {
   font-size: 24px;
   line-height: 30px;
   text-align: center;
-  color: #FFF8EE;
-  background-color: #F85959;
+  color: #fff8ee;
+  background-color: #f85959;
   border-radius: 25px;
   margin-right: 30px;
 }
@@ -190,11 +194,11 @@ iframe {
 }
 
 .todo__btn:after {
-  content: '';
+  content: "";
   display: block;
   height: 1px;
   flex-grow: 1;
-  border-bottom: 1px dotted #F85959;
+  border-bottom: 1px dotted #f85959;
 }
 
 .todo__btn:hover {
